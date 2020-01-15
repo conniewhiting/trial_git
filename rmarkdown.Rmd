@@ -1,0 +1,23 @@
+---
+title: "trial graphs/git"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+First read in some data, before making some graphs. I will use the limpet data from day 2
+
+```{r}
+
+limpetsM <- read.csv('limpet.csv')
+str(limpetsM)
+library(tidyverse)
+
+ggplot(limpetsM, aes(x=DENSITY, y= EGGS, colour=SEASON)) +
+  geom_point() 
+
+
+
+``` 
